@@ -1,0 +1,6 @@
+SELECT u.NAME, COALESCE(SUM(t.amount),0) AS BALANCE
+FROM Transactions t
+JOIN Users u 
+USING (account)
+GROUP BY account
+HAVING BALANCE > 10000;
