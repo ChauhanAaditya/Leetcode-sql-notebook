@@ -1,5 +1,5 @@
 UPDATE table_name
 SET sex = CASE
-            WHEN sex = 'f' THEN ?
-            WHEN sex = 'm' THEN ?
+            WHEN sex = 'f' THEN 'm'
+            WHEN sex = 'm' THEN 'f'
           END;
